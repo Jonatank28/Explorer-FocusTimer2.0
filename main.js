@@ -12,7 +12,10 @@ const card4 = document.querySelector('.card4')
 let minutes = document.querySelector('.minutes')
 let seconds = document.querySelector('.seconds')
 let timerTimeOut
-let svg 
+let svg1  = document.querySelector('.card1 svg path')
+let svg2  = document.querySelector('.card2 svg path')
+let svg3  = document.querySelector('.card3 svg path')
+let svg4  = document.querySelector('.card4 svg path')
 
 const sound = Sound()
 
@@ -30,7 +33,6 @@ function subtraction() {
 }
 
 function countDown(){
-    sound.relogio.play()
     timerTimeOut = setTimeout(function(){
         let newSegunds = Number(seconds.textContent)
         let newMinutes = Number(minutes.textContent)
@@ -41,10 +43,11 @@ function countDown(){
 
         if(newSegunds <= 0 ){
             minutes.textContent = String(minutes.textContent - 1).padStart(2, "0")
-            newSegunds = 20
+            newSegunds = 60
         }
 
         seconds.textContent = String(newSegunds - 1).padStart(2, "0")
+        sound.relogio.play()
         countDown()
     },1000)
 }
@@ -68,24 +71,47 @@ buttonSubtraction.addEventListener('click', () =>{
 
 
 card1.addEventListener('click', () =>{
-        sound.bg.pause()
-        sound.despertador.play()
+    sound.cafeteria.pause()
+    sound.lareira.pause()
+    sound.chuva.pause()
+    sound.floresta.play()
+    svg4.classList.remove('clicado')
+    svg3.classList.remove('clicado')
+    svg2.classList.remove('clicado')
+    svg1.classList.add('clicado')
 })
 
 card2.addEventListener('click', () =>{
-    sound.despertador.pause()
+    sound.cafeteria.pause()
+    sound.floresta.pause()
+    sound.lareira.pause()
     sound.chuva.play()
-    console.log(`card2`)
+    svg4.classList.remove('clicado')
+    svg3.classList.remove('clicado')
+    svg1.classList.remove('clicado')
+    svg2.classList.add('clicado')
 })
 
 card3.addEventListener('click', () =>{
-    sound.chuva.play()
-    console.log(`card3`)
+    sound.floresta.pause()
+    sound.lareira.pause()
+    sound.chuva.pause()
+    sound.cafeteria.play()
+    svg4.classList.remove('clicado')
+    svg1.classList.remove('clicado')
+    svg2.classList.remove('clicado')
+    svg3.classList.add('clicado')
 })
 
 card4.addEventListener('click', () =>{
-    sound.bg.play()
-    console.log(`card4`)
+    sound.floresta.pause()
+    sound.chuva.pause()
+    sound.cafeteria.pause()
+    sound.lareira.play()
+    svg3.classList.remove('clicado')
+    svg1.classList.remove('clicado')
+    svg2.classList.remove('clicado')
+    svg4.classList.add('clicado')
 })
 
 
