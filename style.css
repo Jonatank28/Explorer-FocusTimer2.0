@@ -11,7 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(61, 93, 93);
+    /* background-color: rgb(61, 93, 93); */
 }
 button{
     background-color: transparent;
@@ -26,7 +26,7 @@ svg path{
 }
 
 main{
-    background-color: rgb(185, 212, 204);
+    /* background-color: rgb(185, 212, 204); */
     padding: 2rem 4rem;
     border-radius: 7px;
     display: flex;
