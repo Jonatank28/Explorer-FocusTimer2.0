@@ -2,13 +2,19 @@ export default function () {
 
     const relogio = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/button-press.wav?raw=true")
     const despertador = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/kichen-timer.mp3?raw=true")
-    const bg = new Audio("https://github.com/maykbrito/automatic-video-creator/blob/master/audios/bg-audio.mp3?raw=true")
-    const lareira = new Audio("https://drive.google.com/file/d/1Ip8xBqAUJ-bty51Wz8JBtX_bWXCgA0P2/view?usp=sharing")
+    
+
+    const chuva = new Audio("https://github.com/Jonatank28/FocusTimer2.0/blob/master/sounds/Chuva.wav?raw=true")
+    const lareira = new Audio("https://github.com/Jonatank28/FocusTimer2.0/blob/master/sounds/Lareira.wav?raw=true")
+    const chuva = new Audio("https://github.com/Jonatank28/FocusTimer2.0/blob/master/sounds/Chuva.wav?raw=true")
+    const chuva = new Audio("https://github.com/Jonatank28/FocusTimer2.0/blob/master/sounds/Chuva.wav?raw=true")
+    
+
 
     return {
         relogio,
         despertador,
-        bg,
+        chuva,
         lareira
     }
 }

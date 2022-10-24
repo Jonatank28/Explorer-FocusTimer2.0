@@ -68,19 +68,23 @@ buttonSubtraction.addEventListener('click', () =>{
 
 
 card1.addEventListener('click', () =>{
-    console.log(`card1`)
-    sound.lareira.play()
+        sound.bg.pause()
+        sound.despertador.play()
 })
 
 card2.addEventListener('click', () =>{
+    sound.despertador.pause()
+    sound.chuva.play()
     console.log(`card2`)
 })
 
 card3.addEventListener('click', () =>{
+    sound.chuva.play()
     console.log(`card3`)
 })
 
 card4.addEventListener('click', () =>{
+    sound.bg.play()
     console.log(`card4`)
 })
 
